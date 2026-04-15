@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>New Tender Input | PRISM Framework</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-high": "#e7e8ea",
+                        "secondary-fixed-dim": "#a5c8fe",
+                        "primary-fixed": "#d6e3ff",
+                        "primary-fixed-dim": "#adc7f8",
+                        "primary": "#000e24",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#191c1e",
+                        "surface-dim": "#d9dadc",
+                        "on-secondary-fixed": "#001c3a",
+                        "tertiary-container": "#401700",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#ffdbcb",
+                        "on-tertiary-fixed": "#341100",
+                        "tertiary-fixed-dim": "#ffb690",
+                        "secondary-container": "#a5c8fe",
+                        "surface-container-low": "#f3f4f6",
+                        "background": "#f8f9fb",
+                        "surface-bright": "#f8f9fb",
+                        "on-primary-fixed": "#001b3d",
+                        "secondary-fixed": "#d4e3ff",
+                        "on-surface-variant": "#43474e",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#e1e2e4",
+                        "secondary": "#3c608f",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#00234b",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#2c4771",
+                        "outline": "#74777f",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#455f8a",
+                        "outline-variant": "#c4c6d0",
+                        "surface": "#f8f9fb",
+                        "surface-variant": "#e1e2e4",
+                        "on-tertiary-container": "#bc7b58",
+                        "on-background": "#191c1e",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#224876",
+                        "tertiary": "#1e0700",
+                        "on-secondary-container": "#2f5482",
+                        "on-tertiary-fixed-variant": "#6c391c",
+                        "on-primary-container": "#718bb9",
+                        "inverse-primary": "#adc7f8",
+                        "surface-container": "#edeef0",
+                        "inverse-surface": "#2e3132",
+                        "inverse-on-surface": "#f0f1f3"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #f8f9fb;
+            color: #191c1e;
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- SideNavBar -->
+<aside class="hidden md:flex flex-col h-screen w-64 fixed left-0 top-0 border-r bg-slate-100 dark:bg-slate-950 font-inter text-sm font-medium tracking-wide z-50">
+<div class="p-6">
+<div class="flex items-center gap-3 mb-10">
+<div class="w-10 h-10 bg-primary-container rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">insights</span>
+</div>
+<div>
+<h1 class="font-manrope font-black text-2xl text-blue-950 dark:text-white leading-none">PRISM</h1>
+<p class="text-[10px] uppercase tracking-widest text-slate-500 mt-1">Editorial Intelligence</p>
+</div>
+</div>
+<nav class="space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-white dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 rounded-lg shadow-sm font-bold" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add_circle</span>
+<span>New Tender</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span>Decision Results</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">group_add</span>
+<span>Resource Matching</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">monetization_on</span>
+<span>Client Tracker</span>
+</a>
+</nav>
+</div>
+<div class="mt-auto p-6 space-y-2 border-t border-slate-200 dark:border-slate-800">
+<a class="flex items-center gap-3 px-4 py-2 text-slate-500 hover:text-blue-900 transition-colors" href="#">
+<span class="material-symbols-outlined">help</span>
+<span>Support</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-slate-500 hover:text-blue-900 transition-colors" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span>Account</span>
+</a>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="md:ml-64 min-h-screen bg-surface flex flex-col">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center px-8 h-16 w-full sticky top-0 bg-slate-50/70 dark:bg-slate-900/70 backdrop-blur-md border-b border-slate-200/50 dark:border-slate-800/50 z-40">
+<div class="flex items-center gap-8">
+<span class="text-blue-950 dark:text-white font-extrabold tracking-tighter font-manrope font-bold text-lg">PRISM Framework</span>
+<nav class="hidden lg:flex items-center gap-6 text-sm font-medium">
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-800 transition-colors" href="#">Dashboard</a>
+<a class="text-blue-900 dark:text-blue-200 border-b-2 border-blue-900 dark:border-blue-200 pb-1" href="#">New Tender</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-800 transition-colors" href="#">Decision Results</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-md transition-all text-slate-500">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-md transition-all text-slate-500">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-slate-200 overflow-hidden">
+<img alt="User Profile - Business Development" data-alt="close-up portrait of a professional woman in business attire with a confident expression and soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw-6sVOZpwKZ5aaSnExa3WLdHWDTSXGRbY67SWUGKtNqlKXJllfbFTmoVGaFbSS5SDnI668cIJ-W2yEZ1VnXufHk1C1fl_NATHyx-W8xFfmJq0Ck-KQKPAfAUH4NZCne2q19oua8jbYNlE3VkAho7iAPgQ3oj4hkz9OZO1CyNKjtOyInMOCiP9Lap2qeS0LgJesuPV987njnpWqTNyFaWaGUyznu9vUoXj1WgXYgIL5CTLquDbwW5eY1bpk4QiCryzT5ClnHPndCA"/>
+</div>
+</div>
+</header>
+<!-- Content Area -->
+<div class="flex-grow p-12 lg:p-24 max-w-7xl mx-auto w-full">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-20">
+<!-- Editorial Header Section -->
+<div class="lg:col-span-5 space-y-8">
+<div class="inline-flex items-center px-3 py-1 bg-primary-container text-on-primary-container rounded-full text-[10px] font-bold tracking-widest uppercase">
+                        Intelligence Module 01
+                    </div>
+<h2 class="font-headline text-5xl font-extrabold text-primary tracking-tight leading-[1.1]">
+                        Register a New <br/><span class="text-surface-tint">Strategic Tender.</span>
+</h2>
+<p class="font-body text-on-surface-variant text-lg leading-relaxed max-w-md">
+                        Our intelligence engine requires high-fidelity data to provide accurate success projections and resource allocation recommendations. Ensure all financial metrics are verified before submission.
+                    </p><p class="text-xs text-on-surface-variant/60 italic mt-4">Inputs will be matched against historical project data for accuracy.</p>
+<div class="pt-8 space-y-6">
+<div class="flex gap-4 items-start">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+</div>
+<div>
+<h4 class="font-semibold text-primary">Compliance Check</h4>
+<p class="text-sm text-on-surface-variant">Automated validation against regional frameworks.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary">hub</span>
+</div>
+<div>
+<h4 class="font-semibold text-primary">Network Analysis</h4>
+<p class="text-sm text-on-surface-variant">Maps existing client relationships in real-time.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Form Section -->
+<div class="lg:col-span-7">
+<div class="bg-surface-container-lowest p-10 rounded-xl shadow-[0_12px_32px_rgba(25,28,30,0.04)] border border-outline-variant/10">
+<form class="space-y-8">
+<!-- Form Field: Project Name -->
+<div class="space-y-2">
+<label class="block text-[10px] uppercase font-bold tracking-widest text-secondary font-label">Project Name</label>
+<input class="w-full bg-surface-container-low border-none rounded-sm px-4 py-4 text-primary placeholder:text-slate-400 focus:ring-0 focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_rgba(69,95,138,0.2)] transition-all" placeholder="e.g. Northeast Infrastructure Expansion 2024" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Form Field: Sector -->
+<div class="space-y-2">
+<label class="block text-[10px] uppercase font-bold tracking-widest text-secondary font-label">Sector</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low border-none rounded-sm px-4 py-4 text-primary focus:ring-0 focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_rgba(69,95,138,0.2)] transition-all appearance-none cursor-pointer border-surface-tint/20">
+<option>Public Infrastructure</option>
+<option>Renewable Energy</option>
+<option>Financial Services</option>
+<option>Healthcare Systems</option>
+<option>Urban Technology</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">expand_more</span>
+</div>
+</div>
+<!-- Form Field: Project Value -->
+<div class="space-y-2">
+<label class="block text-[10px] uppercase font-bold tracking-widest text-secondary font-label">Estimated Value (USD)</label>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 font-medium">$</span>
+<input class="w-full bg-surface-container-low border-none rounded-sm pl-8 pr-4 py-4 text-primary placeholder:text-slate-400 focus:ring-0 focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_rgba(69,95,138,0.2)] transition-all border-surface-tint/20" placeholder="0.00" type="text"/>
+</div>
+</div>
+</div>
+<!-- Form Field: Client Name -->
+<div class="space-y-2">
+<label class="block text-[10px] uppercase font-bold tracking-widest text-secondary font-label">Client Entity</label>
+<input class="w-full bg-surface-container-low border-none rounded-sm px-4 py-4 text-primary placeholder:text-slate-400 focus:ring-0 focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_rgba(69,95,138,0.2)] transition-all" placeholder="Enter formal organization name" type="text"/>
+</div>
+<!-- Form Field: Notes -->
+<div class="space-y-2"><label class="block text-[10px] uppercase font-bold tracking-widest text-secondary font-label flex items-center gap-1">Client Type <span class="text-surface-tint">*</span></label><div class="relative"><select class="w-full bg-surface-container-low border border-surface-tint/20 rounded-sm px-4 py-4 text-primary focus:ring-0 focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_rgba(69,95,138,0.2)] transition-all appearance-none cursor-pointer"><option disabled="" selected="">Select client type</option><option>Government</option><option>Private</option><option>BUMN</option></select><span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">expand_more</span></div></div><div class="space-y-2">
+<label class="block text-[10px] uppercase font-bold tracking-widest text-secondary font-label">Strategic Notes</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-sm px-4 py-4 text-primary placeholder:text-slate-400 focus:ring-0 focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_rgba(69,95,138,0.2)] transition-all resize-none" placeholder="Outline specific nuances, key competitors, or partnership requirements..." rows="4"></textarea>
+</div>
+<!-- CTA Section -->
+<div class="pt-4 flex items-center justify-between flex-wrap md:flex-nowrap gap-4">
+<div class="flex items-center gap-2 text-on-tertiary-fixed-variant flex-col !items-start gap-1">
+<span class="material-symbols-outlined text-[18px]">info</span>
+<span class="text-xs">Analysis takes approx. 12 seconds.</span>
+</div><div class="mt-1 text-[10px] text-on-surface-variant/70 leading-tight max-w-[200px]">This will evaluate win probability, resource readiness, and risk level.</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-4 rounded-md font-bold text-sm tracking-wide shadow-lg shadow-primary/10 hover:translate-y-[-2px] active:scale-95 transition-all" type="submit">Run Decision Analysis</button>
+</div>
+</form>
+</div>
+<!-- Footnote / Detail -->
+<div class="mt-8 flex justify-end">
+<div class="flex items-center gap-8 opacity-40">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">security</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">AES-256 Encrypted</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">cloud_done</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Cloud Synchronized</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Background Asset (Subtle gradient) -->
+<div class="h-32 w-full mt-auto opacity-20 pointer-events-none" style="background: linear-gradient(180deg, rgba(248,249,251,0) 0%, rgba(173,199,248,0.2) 100%)"></div>
+</main>
+<!-- BottomNavBar (Mobile only) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-white dark:bg-slate-900 flex justify-around items-center px-4 z-50 border-t border-slate-200">
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-blue-900" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add_circle</span>
+<span class="text-[10px] font-bold">New</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-[10px]">Results</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-[10px]">Account</span>
+</a>
+</nav>
+</body></html>
