@@ -1,429 +1,560 @@
 <!DOCTYPE html>
-
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>PRISM Framework - Strategic Dashboard</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "surface-container-high": "#e7e8ea",
-              "secondary-fixed-dim": "#a5c8fe",
-              "primary-fixed": "#d6e3ff",
-              "primary-fixed-dim": "#adc7f8",
-              "primary": "#000e24",
-              "on-tertiary": "#ffffff",
-              "on-surface": "#191c1e",
-              "surface-dim": "#d9dadc",
-              "on-secondary-fixed": "#001c3a",
-              "tertiary-container": "#401700",
-              "on-error": "#ffffff",
-              "tertiary-fixed": "#ffdbcb",
-              "on-tertiary-fixed": "#341100",
-              "tertiary-fixed-dim": "#ffb690",
-              "secondary-container": "#a5c8fe",
-              "surface-container-low": "#f3f4f6",
-              "background": "#f8f9fb",
-              "surface-bright": "#f8f9fb",
-              "on-primary-fixed": "#001b3d",
-              "secondary-fixed": "#d4e3ff",
-              "on-surface-variant": "#43474e",
-              "surface-container-lowest": "#ffffff",
-              "surface-container-highest": "#e1e2e4",
-              "secondary": "#3c608f",
-              "on-secondary": "#ffffff",
-              "on-error-container": "#93000a",
-              "primary-container": "#00234b",
-              "error": "#ba1a1a",
-              "on-primary-fixed-variant": "#2c4771",
-              "outline": "#74777f",
-              "on-primary": "#ffffff",
-              "surface-tint": "#455f8a",
-              "outline-variant": "#c4c6d0",
-              "surface": "#f8f9fb",
-              "surface-variant": "#e1e2e4",
-              "on-tertiary-container": "#bc7b58",
-              "on-background": "#191c1e",
-              "error-container": "#ffdad6",
-              "on-secondary-fixed-variant": "#224876",
-              "tertiary": "#1e0700",
-              "on-secondary-container": "#2f5482",
-              "on-tertiary-fixed-variant": "#6c391c",
-              "on-primary-container": "#718bb9",
-              "inverse-primary": "#adc7f8",
-              "surface-container": "#edeef0",
-              "inverse-surface": "#2e3132",
-              "inverse-on-surface": "#f0f1f3"
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>PRISM Framework - Strategic Dashboard</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-high": "#e7e8ea",
+                        "secondary-fixed-dim": "#a5c8fe",
+                        "primary-fixed": "#d6e3ff",
+                        "primary-fixed-dim": "#adc7f8",
+                        "primary": "#000e24",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#191c1e",
+                        "surface-dim": "#d9dadc",
+                        "on-secondary-fixed": "#001c3a",
+                        "tertiary-container": "#401700",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#ffdbcb",
+                        "on-tertiary-fixed": "#341100",
+                        "tertiary-fixed-dim": "#ffb690",
+                        "secondary-container": "#a5c8fe",
+                        "surface-container-low": "#f3f4f6",
+                        "background": "#f8f9fb",
+                        "surface-bright": "#f8f9fb",
+                        "on-primary-fixed": "#001b3d",
+                        "secondary-fixed": "#d4e3ff",
+                        "on-surface-variant": "#43474e",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#e1e2e4",
+                        "secondary": "#3c608f",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#00234b",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#2c4771",
+                        "outline": "#74777f",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#455f8a",
+                        "outline-variant": "#c4c6d0",
+                        "surface": "#f8f9fb",
+                        "surface-variant": "#e1e2e4",
+                        "on-tertiary-container": "#bc7b58",
+                        "on-background": "#191c1e",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#224876",
+                        "tertiary": "#1e0700",
+                        "on-secondary-container": "#2f5482",
+                        "on-tertiary-fixed-variant": "#6c391c",
+                        "on-primary-container": "#718bb9",
+                        "inverse-primary": "#adc7f8",
+                        "surface-container": "#edeef0",
+                        "inverse-surface": "#2e3132",
+                        "inverse-on-surface": "#f0f1f3"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
             },
-            fontFamily: {
-              "headline": ["Manrope"],
-              "body": ["Inter"],
-              "label": ["Inter"]
-            },
-            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
-          },
-        },
-      }
+        }
     </script>
-<style>
-      .material-symbols-outlined {
-        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-      }
-      body {
-        font-family: 'Inter', sans-serif;
-        background-color: #f8f9fb;
-      }
-      .glass-nav {
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-      }
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fb;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
     </style>
 </head>
 <body class="bg-surface text-on-surface antialiased">
-<!-- Sidebar Navigation -->
-<aside class="hidden md:flex flex-col h-screen w-64 fixed left-0 top-0 border-r border-slate-200/50 bg-slate-100 dark:bg-slate-950 p-4 space-y-2 z-50">
-<div class="mb-8 px-2 flex items-center gap-3">
-<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white font-black text-xl font-manrope">P</div>
-<div>
-<h1 class="font-manrope font-black text-2xl text-blue-950 dark:text-white leading-none">PRISM</h1>
-<p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Project Intelligence</p>
-</div>
-</div>
-<nav class="flex-1 space-y-1">
-<a class="flex items-center gap-3 px-3 py-2.5 bg-white dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 rounded-lg shadow-sm font-bold font-inter text-sm tracking-wide transition-all scale-98" href="#">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+    <aside class="hidden md:flex flex-col h-screen w-64 fixed left-0 top-0 border-r border-slate-200/50 bg-slate-100 dark:bg-slate-950 p-4 space-y-2 z-50">
+        <div class="mb-8 px-2 flex items-center gap-3">
+            <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white font-black text-xl font-manrope">P</div>
+            <div>
+                <h1 class="font-manrope font-black text-2xl text-blue-950 dark:text-white leading-none">PRISM</h1>
+                <p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Project Intelligence</p>
+            </div>
+        </div>
+        <nav class="flex-1 space-y-1">
+            <a class="flex items-center gap-3 px-3 py-2.5 bg-white dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 rounded-lg shadow-sm font-bold font-inter text-sm tracking-wide transition-all scale-98" href="index.html">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
                 Dashboard
             </a>
-<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 hover:translate-x-1 transition-transform duration-200 font-inter text-sm font-medium tracking-wide" href="#">
-<span class="material-symbols-outlined">add_circle</span>
+            <a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 hover:translate-x-1 transition-transform duration-200 font-inter text-sm font-medium tracking-wide" href="tender-input/index.html">
+                <span class="material-symbols-outlined">add_circle</span>
                 Active Tenders
             </a>
-<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 hover:translate-x-1 transition-transform duration-200 font-inter text-sm font-medium tracking-wide" href="#">
-<span class="material-symbols-outlined">analytics</span>
+            <a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 hover:translate-x-1 transition-transform duration-200 font-inter text-sm font-medium tracking-wide" href="strategic-decision/index.html">
+                <span class="material-symbols-outlined">analytics</span>
                 Success Analysis
             </a>
-<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 hover:translate-x-1 transition-transform duration-200 font-inter text-sm font-medium tracking-wide" href="#">
-<span class="material-symbols-outlined">group_add</span>
+            <a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 hover:translate-x-1 transition-transform duration-200 font-inter text-sm font-medium tracking-wide" href="expert-matching/index.html">
+                <span class="material-symbols-outlined">group_add</span>
                 Resource Allocation
             </a>
-<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 hover:translate-x-1 transition-transform duration-200 font-inter text-sm font-medium tracking-wide" href="#">
-<span class="material-symbols-outlined">folder_shared</span>
+            <a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 hover:translate-x-1 transition-transform duration-200 font-inter text-sm font-medium tracking-wide" href="client-history/index.html">
+                <span class="material-symbols-outlined">folder_shared</span>
                 Project Archive
             </a>
-</nav>
-<div class="mt-auto pt-4 border-t border-slate-200 dark:border-slate-800 space-y-1">
-<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-200 font-inter text-sm font-medium" href="#">
-<span class="material-symbols-outlined">help</span>
+        </nav>
+        <div class="mt-auto pt-4 border-t border-slate-200 dark:border-slate-800 space-y-1">
+            <a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-200 font-inter text-sm font-medium" href="#">
+                <span class="material-symbols-outlined">help</span>
                 Support
             </a>
-<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-200 font-inter text-sm font-medium" href="#">
-<span class="material-symbols-outlined">account_circle</span>
+            <a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-200 font-inter text-sm font-medium" href="#">
+                <span class="material-symbols-outlined">account_circle</span>
                 Account
             </a>
-</div>
-</aside>
-<!-- Main Content Area -->
-<main class="md:ml-64 min-h-screen">
-<!-- Top Bar -->
-<header class="flex justify-between items-center px-8 h-16 w-full sticky top-0 bg-slate-50/70 dark:bg-slate-900/70 backdrop-blur-md border-b border-slate-200/50 dark:border-slate-800/50 z-40">
-<div class="flex items-center gap-8">
-<div class="relative group">
-<span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
-<span class="material-symbols-outlined text-sm">search</span>
-</span>
-<input class="bg-surface-container-low border-none rounded-sm pl-10 pr-4 py-1.5 text-sm w-64 focus:ring-2 focus:ring-surface-tint/40 focus:bg-surface-container-lowest transition-all" placeholder="Search project history..." type="text"/>
-</div>
-<nav class="hidden lg:flex items-center gap-6">
-<a class="text-blue-900 dark:text-blue-200 border-b-2 border-blue-900 dark:border-blue-200 pb-1 font-manrope font-bold text-sm tracking-tight" href="#">Overview</a>
-<a class="text-slate-500 dark:text-slate-400 hover:text-blue-800 transition-colors font-manrope font-bold text-sm tracking-tight" href="#">Sector Performance</a>
-<a class="text-slate-500 dark:text-slate-400 hover:text-blue-800 transition-colors font-manrope font-bold text-sm tracking-tight" href="#">Tender Pipeline</a>
-</nav>
-</div>
-<div class="flex items-center gap-4">
-<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-4 py-2 rounded-md text-xs font-bold uppercase tracking-wider flex items-center gap-2 hover:opacity-90 active:scale-95 transition-all">
-<span class="material-symbols-outlined text-sm">add</span>
+        </div>
+    </aside>
+
+    <main class="md:ml-64 min-h-screen">
+        <header class="flex justify-between items-center px-8 h-16 w-full sticky top-0 bg-slate-50/70 dark:bg-slate-900/70 backdrop-blur-md border-b border-slate-200/50 dark:border-slate-800/50 z-40">
+            <div class="flex items-center gap-8">
+                <div class="relative group">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
+                        <span class="material-symbols-outlined text-sm">search</span>
+                    </span>
+                    <input class="bg-surface-container-low border-none rounded-sm pl-10 pr-4 py-1.5 text-sm w-64 focus:ring-2 focus:ring-surface-tint/40 focus:bg-surface-container-lowest transition-all" placeholder="Search project history..." type="text"/>
+                </div>
+                <nav class="hidden lg:flex items-center gap-6">
+                    <a class="text-blue-900 dark:text-blue-200 border-b-2 border-blue-900 dark:border-blue-200 pb-1 font-manrope font-bold text-sm tracking-tight" href="index.html">Overview</a>
+                    <a class="text-slate-500 dark:text-slate-400 hover:text-blue-800 transition-colors font-manrope font-bold text-sm tracking-tight" href="#">Sector Performance</a>
+                    <a class="text-slate-500 dark:text-slate-400 hover:text-blue-800 transition-colors font-manrope font-bold text-sm tracking-tight" href="tender-input/index.html">Tender Pipeline</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-4">
+                <button onclick="window.location.href='tender-input/index.html'" class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-4 py-2 rounded-md text-xs font-bold uppercase tracking-wider flex items-center gap-2 hover:opacity-90 active:scale-95 transition-all">
+                    <span class="material-symbols-outlined text-sm">add</span>
                     New Bid Entry
                 </button>
-<div class="flex items-center gap-2 border-l border-slate-200 pl-4">
-<button class="p-2 text-slate-500 hover:bg-slate-100 rounded-md transition-all">
-<span class="material-symbols-outlined">notifications</span>
-</button>
-<button class="p-2 text-slate-500 hover:bg-slate-100 rounded-md transition-all">
-<span class="material-symbols-outlined">settings</span>
-</button>
-<img alt="User Profile" class="w-8 h-8 rounded-full border border-slate-200 shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn9Gch-dwgZAfY7dUAo7deEMn8TyR1t7g-X_oDui-CjaGT4tmnWQIU4cWXXYagP5QK3eYcug2Z3X4wZxys94dUVKGM8iibgI0Rw2WLZKgacU_8wXhsg25OvxM8gGoEz4CJ5sbeT51rylFw9iBYNUCmGYt5dqGMCL5eTbEK1sia26EMUJozAJg4wlcmJvjWENzd4Me5XcGwij60ilLnRVUTc5LMV6Y-1mD5qdfTbH9t-9ujOZeatgZvUltRc06X1oZvuuV_TgGQX_Q"/>
-</div>
-</div>
-</header>
-<!-- Dashboard Content -->
-<div class="p-8 max-w-7xl mx-auto space-y-12"><p class="text-sm font-medium text-on-surface-variant mb-4">This dashboard highlights sectors with the highest likelihood of success based on past project data</p>
-<!-- Hero Header Section -->
-<section class="flex flex-col md:flex-row justify-between items-end gap-6">
-<div class="max-w-2xl">
-<h2 class="font-headline font-extrabold text-primary text-5xl tracking-tighter mb-4">Dashboard</h2>
-<p class="font-body text-on-surface-variant text-lg leading-relaxed">Strategic overview for tender prioritization based on historical project performance</p>
-</div>
-<div class="bg-surface-container-high px-6 py-4 rounded-xl flex items-center gap-4 border border-outline-variant/30">
-<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">trending_up</span>
-</div>
-<div>
-<p class="text-[10px] uppercase font-bold tracking-widest text-on-surface-variant">Optimal Bid Target</p>
-<p class="font-headline font-bold text-primary text-xl">Geotechnical</p>
-</div>
-</div>
-</section>
-<!-- KPI Row (Tonal Layering) -->
-<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<div class="bg-surface-container-lowest p-8 rounded-xl ring-1 ring-black/5 flex flex-col justify-between h-48">
-<div>
-<span class="text-[10px] font-label font-bold uppercase tracking-[0.1rem] text-on-surface-variant">Historical Project Count</span>
-<h3 class="text-4xl font-headline font-extrabold text-primary mt-2">1,284</h3>
-</div>
-<div class="flex items-center gap-2 text-on-secondary-container font-bold text-sm bg-secondary-container/30 w-fit px-2 py-1 rounded-full">
-<span class="material-symbols-outlined text-sm">bar_chart</span>
-<span>Full Portfolio</span>
-</div>
-</div>
-<div class="bg-surface-container-lowest p-8 rounded-xl ring-1 ring-black/5 flex flex-col justify-between h-48">
-<div>
-<span class="text-[10px] font-label font-bold uppercase tracking-[0.1rem] text-on-surface-variant">Active Engagements</span>
-<h3 class="text-4xl font-headline font-extrabold text-primary mt-2">412</h3>
-</div>
-<div class="flex items-center gap-2 text-on-surface-variant font-medium text-sm">
-<span class="w-2 h-2 rounded-full bg-primary-container"></span>
-<span>32% Pipeline Utilization</span>
-</div>
-</div>
-<div class="bg-surface-container-lowest p-8 rounded-xl ring-1 ring-black/5 flex flex-col justify-between h-48">
-<div>
-<span class="text-[10px] font-label font-bold uppercase tracking-[0.1rem] text-on-surface-variant">Historical Success Rate</span>
-<h3 class="text-4xl font-headline font-extrabold text-primary mt-2">68%</h3>
-</div>
-<div class="flex items-center gap-2 text-on-secondary-container font-bold text-sm bg-secondary-container/30 w-fit px-2 py-1 rounded-full">
-<span class="material-symbols-outlined text-sm">verified</span>
-<span>Weighted Average</span>
-</div>
-</div>
-</section>
-<!-- Main Insights Grid -->
-<section class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-<!-- Sector Performance Bento -->
-<div class="lg:col-span-8 space-y-8">
-<div class="bg-surface-container-low p-8 rounded-xl space-y-8">
-<div class="flex justify-between items-center">
-<div>
-<h4 class="font-headline font-bold text-2xl text-primary">Top Sector Performance</h4>
-<p class="text-xs text-on-surface-variant mt-1 font-medium">Ranked by historical success and contract volume</p>
-</div>
-<div class="flex gap-2">
-<span class="px-3 py-1 bg-surface-container-highest text-[10px] font-bold uppercase rounded-full">Success Rate</span>
-<span class="px-3 py-1 bg-surface-container-highest text-[10px] font-bold uppercase rounded-full">Project Count</span>
-</div>
-</div>
-<div class="space-y-6">
-<!-- Sector Item: Geotechnical (Top) -->
-<div class="grid grid-cols-12 items-center gap-4 group bg-surface-container-lowest/40 p-3 rounded-lg ring-1 ring-primary/5">
-<div class="col-span-3">
-<div class="flex items-center gap-2">
-<p class="font-headline font-bold text-primary">Geotechnical</p>
-<span class="text-[10px] font-bold px-1.5 py-0.5 bg-green-100 text-green-700 rounded uppercase">Top</span>
-</div>
-<p class="text-xs text-on-surface-variant font-semibold">342 Projects</p>
-</div>
-<div class="col-span-7 h-3 bg-surface-container-highest rounded-full overflow-hidden relative">
-<div class="h-full bg-gradient-to-r from-primary to-secondary w-[88%] rounded-full"></div>
-</div>
-<div class="col-span-2 text-right">
-<p class="font-headline font-black text-primary">88%</p>
-<p class="text-[9px] font-bold text-primary-fixed-variant leading-tight">Consistent Win Rate</p>
-</div>
-<div class="col-span-12 mt-1 px-1">
-<p class="text-[11px] italic text-on-surface-variant">Historically strong sector based on consistent win rate.</p>
-</div>
-</div>
-<!-- Sector Item: Hydrology (Mid) -->
-<div class="grid grid-cols-12 items-center gap-4 group p-3">
-<div class="col-span-3">
-<div class="flex items-center gap-2">
-<p class="font-headline font-bold text-primary">Hydrology</p>
-<span class="text-[10px] font-bold px-1.5 py-0.5 bg-blue-100 text-blue-700 rounded uppercase">Mid</span>
-</div>
-<p class="text-xs text-on-surface-variant font-semibold">215 Projects</p>
-</div>
-<div class="col-span-7 h-3 bg-surface-container-highest rounded-full overflow-hidden">
-<div class="h-full bg-gradient-to-r from-primary to-secondary w-[76%] rounded-full opacity-80"></div>
-</div>
-<div class="col-span-2 text-right">
-<p class="font-headline font-black text-primary">76%</p>
-<p class="text-[9px] font-bold text-on-surface-variant uppercase">Success</p>
-</div>
-</div>
-<!-- Sector Item: Infrastructure (Low - Relative) -->
-<div class="grid grid-cols-12 items-center gap-4 group p-3">
-<div class="col-span-3">
-<div class="flex items-center gap-2">
-<p class="font-headline font-bold text-primary">Infrastructure</p>
-<span class="text-[10px] font-bold px-1.5 py-0.5 bg-slate-200 text-slate-700 rounded uppercase">Low</span>
-</div>
-<p class="text-xs text-on-surface-variant font-semibold">198 Projects</p>
-</div>
-<div class="col-span-7 h-3 bg-surface-container-highest rounded-full overflow-hidden">
-<div class="h-full bg-gradient-to-r from-primary to-secondary w-[64%] rounded-full opacity-60"></div>
-</div>
-<div class="col-span-2 text-right">
-<p class="font-headline font-black text-primary">64%</p>
-<p class="text-[9px] font-bold text-on-surface-variant uppercase">Success</p>
-</div>
-</div>
-</div>
-</div>
-<!-- Tender Pipeline List -->
-<div class="bg-surface-container-lowest p-8 rounded-xl ring-1 ring-black/5">
-<div class="flex justify-between items-center mb-6">
-<div>
-<h4 class="font-headline font-bold text-2xl text-primary">Top Sector Performance</h4>
-<p class="text-xs text-on-surface-variant font-bold uppercase tracking-wider mt-1">Current active tenders per sector</p>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-<div class="p-4 bg-surface-container-low rounded-lg border border-outline-variant/30 flex justify-between items-center">
-<div>
-<p class="text-sm font-bold text-primary">Geotechnical</p>
-<p class="text-[10px] text-error uppercase font-black">8 Active Tenders - At Capacity</p>
-</div>
-<span class="material-symbols-outlined text-primary text-xl">assignment_turned_in</span>
-</div>
-<div class="p-4 bg-surface-container-low rounded-lg border border-outline-variant/30 flex justify-between items-center">
-<div>
-<p class="text-sm font-bold text-primary">Hydrology</p>
-<p class="text-[10px] text-on-surface-variant uppercase font-bold">5 Active Tenders - Optimal</p>
-</div>
-<span class="material-symbols-outlined text-primary text-xl">water_drop</span>
-</div>
-<div class="p-4 bg-surface-container-low rounded-lg border border-outline-variant/30 flex justify-between items-center">
-<div>
-<p class="text-sm font-bold text-primary">Infrastructure</p>
-<p class="text-[10px] text-error uppercase font-black">12 Active Tenders - At Capacity</p>
-</div>
-<span class="material-symbols-outlined text-primary text-xl">architecture</span>
-</div>
-<div class="p-4 bg-surface-container-low rounded-lg border border-outline-variant/30 flex justify-between items-center">
-<div>
-<p class="text-sm font-bold text-primary">Energy</p>
-<p class="text-[10px] text-blue-600 uppercase font-black">4 Active Tenders - Underutilized</p>
-</div>
-<span class="material-symbols-outlined text-primary text-xl">bolt</span>
-</div>
-<div class="p-4 bg-surface-container-low rounded-lg border border-outline-variant/30 flex justify-between items-center">
-<div>
-<p class="text-sm font-bold text-primary">Environmental</p>
-<p class="text-[10px] text-error uppercase font-black">9 Active Tenders - At Capacity</p>
-</div>
-<span class="material-symbols-outlined text-primary text-xl">eco</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Insights Sidebar Bento -->
-<div class="lg:col-span-4 space-y-8">
-<!-- Strategic Focus Insight -->
-<div class="bg-primary text-on-primary p-8 rounded-xl shadow-xl relative overflow-hidden">
-<div class="absolute top-0 right-0 p-4 opacity-10">
-<span class="material-symbols-outlined text-8xl">precision_manufacturing</span>
-</div>
-<h5 class="text-[10px] font-bold uppercase tracking-widest mb-6 text-on-primary-container">Strategic Recommendation</h5>
-<div class="space-y-6 relative z-10">
-<div>
-<p class="font-headline font-bold text-2xl leading-tight">Recommended focus: Geotechnical</p>
-<p class="text-sm mt-3 text-on-primary-container leading-relaxed">Due to 88% success rate across 342 historical projects. Target high-value geotechnical bids as primary Q4 growth driver.</p>
-</div>
-<div class="pt-6 border-t border-on-primary-container/20 space-y-4">
-<p class="text-[10px] font-bold uppercase tracking-widest text-on-primary-container">Winning Patterns</p>
-<div class="space-y-3">
-<div class="flex gap-2">
-<span class="material-symbols-outlined text-sm text-secondary-fixed-dim">verified</span>
-<p class="text-xs text-on-primary-container leading-snug"><strong>Pattern:</strong> Projects &gt;$10M in Geotechnical have a 92% win rate.</p>
-</div>
-<div class="flex gap-2">
-<span class="material-symbols-outlined text-sm text-secondary-fixed-dim">verified</span>
-<p class="text-xs text-on-primary-container leading-snug"><strong>Pattern:</strong> BUMN-led infrastructure projects show 15% higher completion efficiency.</p>
-</div>
-<div class="flex gap-2">
-<span class="material-symbols-outlined text-sm text-secondary-fixed-dim">insights</span>
-<p class="text-xs text-on-primary-container leading-snug"><strong>Alignment:</strong> Hydrology + Urban Drainage expertise matches 85% of Q4 tender requirements.</p>
-</div>
-</div>
-</div>
-</div>
-<button class="w-full mt-8 py-3 bg-on-primary text-primary font-bold rounded-lg text-sm hover:bg-primary-fixed transition-colors">
+                <div class="flex items-center gap-2 border-l border-slate-200 pl-4">
+                    <button class="p-2 text-slate-500 hover:bg-slate-100 rounded-md transition-all">
+                        <span class="material-symbols-outlined">notifications</span>
+                    </button>
+                    <button class="p-2 text-slate-500 hover:bg-slate-100 rounded-md transition-all">
+                        <span class="material-symbols-outlined">settings</span>
+                    </button>
+                    <img alt="User Profile" class="w-8 h-8 rounded-full border border-slate-200 shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn9Gch-dwgZAfY7dUAo7deEMn8TyR1t7g-X_oDui-CjaGT4tmnWQIU4cWXXYagP5QK3eYcug2Z3X4wZxys94dUVKGM8iibgI0Rw2WLZKgacU_8wXhsg25OvxM8gGoEz4CJ5sbeT51rylFw9iBYNUCmGYt5dqGMCL5eTbEK1sia26EMUJozAJg4wlcmJvjWENzd4Me5XcGwij60ilLnRVUTc5LMV6Y-1mD5qdfTbH9t-9ujOZeatgZvUltRc06X1oZvuuV_TgGQX_Q"/>
+                </div>
+            </div>
+        </header>
+
+        <div class="p-8 max-w-7xl mx-auto space-y-12">
+            <p class="text-sm font-medium text-on-surface-variant mb-4">This dashboard highlights sectors with the highest likelihood of success based on past project data</p>
+            
+            <section class="flex flex-col md:flex-row justify-between items-end gap-6">
+                <div class="max-w-2xl">
+                    <h2 class="font-headline font-extrabold text-primary text-5xl tracking-tighter mb-4">Dashboard</h2>
+                    <p class="font-body text-on-surface-variant text-lg leading-relaxed">Strategic overview for tender prioritization based on historical project performance</p>
+                    
+                    <div class="mt-4 inline-flex items-center gap-2 px-3 py-1.5 bg-surface-container-high rounded-full border border-outline-variant/30">
+                        <span class="material-symbols-outlined text-sm text-secondary">history</span>
+                        <span class="text-xs font-bold text-on-surface-variant">Based on 1,284 historical projects (2019–2025)</span>
+                    </div>
+                </div>
+                <div class="bg-surface-container-high px-6 py-4 rounded-xl flex items-center gap-4 border border-outline-variant/30">
+                    <div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase font-bold tracking-widest text-on-surface-variant">Optimal Bid Target</p>
+                        <p class="font-headline font-bold text-primary text-xl">Geotechnical</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-surface-container-lowest p-8 rounded-xl ring-1 ring-black/5 flex flex-col justify-between h-48">
+                    <div>
+                        <span class="text-[10px] font-label font-bold uppercase tracking-[0.1rem] text-on-surface-variant">Historical Project Count</span>
+                        <h3 class="text-4xl font-headline font-extrabold text-primary mt-2">1,284</h3>
+                    </div>
+                    <div class="flex items-center gap-2 text-on-secondary-container font-bold text-sm bg-secondary-container/30 w-fit px-2 py-1 rounded-full">
+                        <span class="material-symbols-outlined text-sm">bar_chart</span>
+                        <span>Full Portfolio</span>
+                    </div>
+                </div>
+                <div class="bg-surface-container-lowest p-8 rounded-xl ring-1 ring-black/5 flex flex-col justify-between h-48">
+                    <div>
+                        <span class="text-[10px] font-label font-bold uppercase tracking-[0.1rem] text-on-surface-variant">Active Engagements</span>
+                        <h3 class="text-4xl font-headline font-extrabold text-primary mt-2">412</h3>
+                    </div>
+                    <div class="flex items-center gap-2 text-on-surface-variant font-medium text-sm">
+                        <span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                        <span>32% Pipeline Utilization</span>
+                    </div>
+                </div>
+                <div class="bg-surface-container-lowest p-8 rounded-xl ring-1 ring-black/5 flex flex-col justify-between h-48">
+                    <div>
+                        <span class="text-[10px] font-label font-bold uppercase tracking-[0.1rem] text-on-surface-variant">Historical Success Rate</span>
+                        <h3 class="text-4xl font-headline font-extrabold text-primary mt-2">68%</h3>
+                    </div>
+                    <div class="flex items-center gap-2 text-on-secondary-container font-bold text-sm bg-secondary-container/30 w-fit px-2 py-1 rounded-full">
+                        <span class="material-symbols-outlined text-sm">verified</span>
+                        <span>Weighted Average</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <div class="lg:col-span-8 space-y-8">
+                    <div class="bg-surface-container-low p-8 rounded-xl space-y-8">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h4 class="font-headline font-bold text-2xl text-primary">Top Sector Performance</h4>
+                                <p class="text-xs text-on-surface-variant mt-1 font-medium">Ranked by historical success and contract volume</p>
+                            </div>
+                            <div class="flex gap-2">
+                                <span class="px-3 py-1 bg-surface-container-highest text-[10px] font-bold uppercase rounded-full">Success Rate</span>
+                                <span class="px-3 py-1 bg-surface-container-highest text-[10px] font-bold uppercase rounded-full">Project Count</span>
+                            </div>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="grid grid-cols-12 items-center gap-4 group bg-surface-container-lowest/40 p-3 rounded-lg ring-1 ring-primary/5">
+                                <div class="col-span-3">
+                                    <div class="flex items-center gap-2">
+                                        <p class="font-headline font-bold text-primary">Geotechnical</p>
+                                        <span class="text-[10px] font-bold px-1.5 py-0.5 bg-green-100 text-green-700 rounded uppercase">Top</span>
+                                    </div>
+                                    <p class="text-xs text-on-surface-variant font-semibold">342 Projects</p>
+                                </div>
+                                <div class="col-span-7 h-3 bg-surface-container-highest rounded-full overflow-hidden relative">
+                                    <div class="h-full bg-gradient-to-r from-primary to-secondary w-[88%] rounded-full"></div>
+                                </div>
+                                <div class="col-span-2 text-right">
+                                    <p class="font-headline font-black text-primary">88%</p>
+                                    <p class="text-[9px] font-bold text-primary-fixed-variant leading-tight">Consistent Win Rate</p>
+                                </div>
+                                <div class="col-span-12 mt-1 px-1">
+                                    <p class="text-[11px] italic text-on-surface-variant">Historically strong sector based on consistent win rate.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-12 items-center gap-4 group p-3">
+                                <div class="col-span-3">
+                                    <div class="flex items-center gap-2">
+                                        <p class="font-headline font-bold text-primary">Hydrology</p>
+                                        <span class="text-[10px] font-bold px-1.5 py-0.5 bg-blue-100 text-blue-700 rounded uppercase">Mid</span>
+                                    </div>
+                                    <p class="text-xs text-on-surface-variant font-semibold">215 Projects</p>
+                                </div>
+                                <div class="col-span-7 h-3 bg-surface-container-highest rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-primary to-secondary w-[76%] rounded-full opacity-80"></div>
+                                </div>
+                                <div class="col-span-2 text-right">
+                                    <p class="font-headline font-black text-primary">76%</p>
+                                    <p class="text-[9px] font-bold text-on-surface-variant uppercase">Success</p>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-12 items-center gap-4 group p-3">
+                                <div class="col-span-3">
+                                    <div class="flex items-center gap-2">
+                                        <p class="font-headline font-bold text-primary">Infrastructure</p>
+                                        <span class="text-[10px] font-bold px-1.5 py-0.5 bg-slate-200 text-slate-700 rounded uppercase">Low</span>
+                                    </div>
+                                    <p class="text-xs text-on-surface-variant font-semibold">198 Projects</p>
+                                </div>
+                                <div class="col-span-7 h-3 bg-surface-container-highest rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-primary to-secondary w-[64%] rounded-full opacity-60"></div>
+                                </div>
+                                <div class="col-span-2 text-right">
+                                    <p class="font-headline font-black text-primary">64%</p>
+                                    <p class="text-[9px] font-bold text-on-surface-variant uppercase">Success</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-surface-container-lowest p-8 rounded-xl ring-1 ring-black/5">
+                        <div class="flex justify-between items-center mb-6">
+                            <div>
+                                <h4 class="font-headline font-bold text-2xl text-primary">Tender Pipeline Status</h4>
+                                <p class="text-xs text-on-surface-variant font-bold uppercase tracking-wider mt-1">Current active tenders per sector</p>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <div class="p-4 bg-surface-container-low rounded-lg border border-outline-variant/30 flex justify-between items-center">
+                                <div>
+                                    <p class="text-sm font-bold text-primary">Geotechnical</p>
+                                    <p class="text-[10px] text-error uppercase font-black">8 Active Tenders - At Capacity</p>
+                                </div>
+                                <span class="material-symbols-outlined text-primary text-xl">assignment_turned_in</span>
+                            </div>
+                            <div class="p-4 bg-surface-container-low rounded-lg border border-outline-variant/30 flex justify-between items-center">
+                                <div>
+                                    <p class="text-sm font-bold text-primary">Hydrology</p>
+                                    <p class="text-[10px] text-on-surface-variant uppercase font-bold">5 Active Tenders - Optimal</p>
+                                </div>
+                                <span class="material-symbols-outlined text-primary text-xl">water_drop</span>
+                            </div>
+                            <div class="p-4 bg-surface-container-low rounded-lg border border-outline-variant/30 flex justify-between items-center">
+                                <div>
+                                    <p class="text-sm font-bold text-primary">Infrastructure</p>
+                                    <p class="text-[10px] text-error uppercase font-black">12 Active Tenders - At Capacity</p>
+                                </div>
+                                <span class="material-symbols-outlined text-primary text-xl">architecture</span>
+                            </div>
+                            <div class="p-4 bg-surface-container-low rounded-lg border border-outline-variant/30 flex justify-between items-center">
+                                <div>
+                                    <p class="text-sm font-bold text-primary">Energy</p>
+                                    <p class="text-[10px] text-blue-600 uppercase font-black">4 Active Tenders - Underutilized</p>
+                                </div>
+                                <span class="material-symbols-outlined text-primary text-xl">bolt</span>
+                            </div>
+                            <div class="p-4 bg-surface-container-low rounded-lg border border-outline-variant/30 flex justify-between items-center">
+                                <div>
+                                    <p class="text-sm font-bold text-primary">Environmental</p>
+                                    <p class="text-[10px] text-error uppercase font-black">9 Active Tenders - At Capacity</p>
+                                </div>
+                                <span class="material-symbols-outlined text-primary text-xl">eco</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-4 space-y-8">
+                    <div class="bg-primary text-on-primary p-8 rounded-xl shadow-xl relative overflow-hidden">
+                        <div class="absolute top-0 right-0 p-4 opacity-10">
+                            <span class="material-symbols-outlined text-8xl">precision_manufacturing</span>
+                        </div>
+                        <h5 class="text-[10px] font-bold uppercase tracking-widest mb-6 text-on-primary-container">Strategic Recommendation</h5>
+                        <div class="space-y-6 relative z-10">
+                            <div>
+                                <p class="font-headline font-bold text-2xl leading-tight">Recommended focus: Geotechnical</p>
+                                <p class="text-sm mt-3 text-on-primary-container leading-relaxed">Due to 88% success rate across 342 historical projects. Target high-value geotechnical bids as primary Q4 growth driver.</p>
+                            </div>
+                            <div class="pt-6 border-t border-on-primary-container/20 space-y-4">
+                                <p class="text-[10px] font-bold uppercase tracking-widest text-on-primary-container">Winning Patterns</p>
+                                <div class="space-y-3">
+                                    <div class="flex gap-2">
+                                        <span class="material-symbols-outlined text-sm text-secondary-fixed-dim">verified</span>
+                                        <p class="text-xs text-on-primary-container leading-snug"><strong>Pattern:</strong> Projects >$10M in Geotechnical have a 92% win rate.</p>
+                                    </div>
+                                    <div class="flex gap-2">
+                                        <span class="material-symbols-outlined text-sm text-secondary-fixed-dim">verified</span>
+                                        <p class="text-xs text-on-primary-container leading-snug"><strong>Pattern:</strong> BUMN-led infrastructure projects show 15% higher completion efficiency.</p>
+                                    </div>
+                                    <div class="flex gap-2">
+                                        <span class="material-symbols-outlined text-sm text-secondary-fixed-dim">insights</span>
+                                        <p class="text-xs text-on-primary-container leading-snug"><strong>Alignment:</strong> Hydrology + Urban Drainage expertise matches 85% of Q4 tender requirements.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button onclick="window.location.href='strategic-decision/index.html'" class="w-full mt-8 py-3 bg-on-primary text-primary font-bold rounded-lg text-sm hover:bg-primary-fixed transition-colors">
                             View Full Decision Matrix
                         </button>
-</div>
-<!-- Efficiency Alerts Module -->
-<div class="bg-surface-container-low p-8 rounded-xl ring-1 ring-black/5">
-<h4 class="font-headline font-bold text-lg text-primary mb-6">Delivery Risk Assessment</h4>
-<div class="space-y-4">
-<div class="p-4 bg-error-container/50 rounded-lg flex items-start gap-3">
-<span class="material-symbols-outlined text-on-error-container">warning</span>
-<div>
-<p class="font-bold text-on-error-container text-sm">Resource Bottleneck</p>
-<p class="text-xs text-on-error-container/80 mt-1">9 active Environmental tenders vs 3 available senior consultants. Immediate reallocation required.</p>
-</div>
-</div>
-<div class="p-4 bg-tertiary-fixed rounded-lg flex items-start gap-3">
-<span class="material-symbols-outlined text-on-tertiary-fixed-variant">event_busy</span>
-<div>
-<p class="font-bold text-on-tertiary-fixed-variant text-sm">Bid Deadline Density</p>
-<p class="text-xs text-on-tertiary-fixed-variant/80 mt-1">4 Infrastructure submissions required in Week 42. Surge support necessary.</p>
-</div>
-</div>
-</div>
-<div class="mt-8">
-<div class="flex justify-between items-center text-xs font-bold mb-2">
-<span class="text-on-surface-variant">Pipeline Conversion Health</span>
-<span class="text-primary">82%</span>
-</div>
-<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
-<div class="h-full bg-secondary w-[82%]"></div>
-</div>
-</div>
-</div>
-<!-- Contextual Imagery Card -->
-<div class="relative h-64 rounded-xl overflow-hidden group">
-<img alt="Project Site Analysis" class="w-full h-full object-cover grayscale brightness-50 group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjG3BP974LWWM_tgYaEuKIrRES_4wL-XCxsOM4Fz2RbM09rnD_2EERl4J1sLYPa2CGAV8qVnYEYQvDL_fFyONm_DJlSb5_v4cFrsiajYUAsnUDj2l7Dz3iQ82FCsUaCP9IqgnRvzxYjMapxKbipsioh5woQrU34IhSPXofaeJDwSROoa2CyJpf1ClNQ9nY8xpiW_4uxZPrleC3dSkIfvWkD9uFFziID4TvHmRzSXVxWqi2WOYBCe0917BqB5fwOD1BDpX6DdVeRTs"/>
-<div class="absolute inset-0 bg-primary/40 p-6 flex flex-col justify-end">
-<h4 class="font-headline font-bold text-white text-xl">Project Success Ledger</h4>
-<p class="text-white/70 text-sm mt-1">Audited Q1-Q3 historical performance data.</p>
-</div>
-</div>
-</div>
-</section>
-</div>
-</main>
-<!-- Mobile Navigation -->
-<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-slate-50 border-t border-slate-200 h-16 flex justify-around items-center px-4 z-50">
-<a class="flex flex-col items-center text-blue-900" href="#">
-<span class="material-symbols-outlined">dashboard</span>
-<span class="text-[10px] font-bold">Dash</span>
-</a>
-<a class="flex flex-col items-center text-slate-400" href="#">
-<span class="material-symbols-outlined">assignment</span>
-<span class="text-[10px] font-bold">Bids</span>
-</a>
-<a class="flex flex-col items-center text-slate-400" href="#">
-<span class="material-symbols-outlined">analytics</span>
-<span class="text-[10px] font-bold">Data</span>
-</a>
-<a class="flex flex-col items-center text-slate-400" href="#">
-<span class="material-symbols-outlined">group</span>
-<span class="text-[10px] font-bold">Team</span>
-</a>
-</nav>
-</body></html>
+                    </div>
+
+                    <div class="bg-surface-container-low p-8 rounded-xl ring-1 ring-black/5">
+                        <h4 class="font-headline font-bold text-lg text-primary mb-6">Delivery Risk Assessment</h4>
+                        <div class="space-y-4">
+                            <div class="p-4 bg-error-container/50 rounded-lg flex items-start gap-3">
+                                <span class="material-symbols-outlined text-on-error-container">warning</span>
+                                <div>
+                                    <p class="font-bold text-on-error-container text-sm">Resource Bottleneck</p>
+                                    <p class="text-xs text-on-error-container/80 mt-1">9 active Environmental tenders vs 3 available senior consultants. Immediate reallocation required.</p>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-tertiary-fixed rounded-lg flex items-start gap-3">
+                                <span class="material-symbols-outlined text-on-tertiary-fixed-variant">event_busy</span>
+                                <div>
+                                    <p class="font-bold text-on-tertiary-fixed-variant text-sm">Bid Deadline Density</p>
+                                    <p class="text-xs text-on-tertiary-fixed-variant/80 mt-1">4 Infrastructure submissions required in Week 42. Surge support necessary.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <div class="flex justify-between items-center text-xs font-bold mb-2">
+                                <span class="text-on-surface-variant">Pipeline Conversion Health</span>
+                                <span class="text-primary">82%</span>
+                            </div>
+                            <div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+                                <div class="h-full bg-secondary w-[82%]"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative h-64 rounded-xl overflow-hidden group">
+                        <img alt="Project Site Analysis" class="w-full h-full object-cover grayscale brightness-50 group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjG3BP974LWWM_tgYaEuKIrRES_4wL-XCxsOM4Fz2RbM09rnD_2EERl4J1sLYPa2CGAV8qVnYEYQvDL_fFyONm_DJlSb5_v4cFrsiajYUAsnUDj2l7Dz3iQ82FCsUaCP9IqgnRvzxYjMapxKbipsioh5woQrU34IhSPXofaeJDwSROoa2CyJpf1ClNQ9nY8xpiW_4uxZPrleC3dSkIfvWkD9uFFziID4TvHmRzSXVxWqi2WOYBCe0917BqB5fwOD1BDpX6DdVeRTs"/>
+                        <div class="absolute inset-0 bg-primary/40 p-6 flex flex-col justify-end">
+                            <h4 class="font-headline font-bold text-white text-xl">Project Success Ledger</h4>
+                            <p class="text-white/70 text-sm mt-1">Audited Q1-Q3 historical performance data.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-surface-container-lowest p-8 rounded-xl ring-1 ring-black/5 overflow-hidden">
+                <div class="flex justify-between items-center mb-6">
+                    <div>
+                        <h4 class="font-headline font-bold text-2xl text-primary">Recent Project History</h4>
+                        <p class="text-xs text-on-surface-variant mt-1 font-medium">Detailed log of recent engagements and outcomes</p>
+                    </div>
+                    <button onclick="window.location.href='client-history/index.html'" class="text-sm font-bold text-secondary hover:text-primary transition-colors flex items-center gap-1">
+                        View Complete Archive <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </button>
+                </div>
+                
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="border-b border-outline-variant/30 bg-surface-container-low/50">
+                                <th class="py-4 px-4 text-xs font-bold uppercase tracking-wider text-on-surface-variant">Project ID</th>
+                                <th class="py-4 px-4 text-xs font-bold uppercase tracking-wider text-on-surface-variant">Sector</th>
+                                <th class="py-4 px-4 text-xs font-bold uppercase tracking-wider text-on-surface-variant">Client Type</th>
+                                <th class="py-4 px-4 text-xs font-bold uppercase tracking-wider text-on-surface-variant">Project Value</th>
+                                <th class="py-4 px-4 text-xs font-bold uppercase tracking-wider text-on-surface-variant">Status</th>
+                                <th class="py-4 px-4 text-xs font-bold uppercase tracking-wider text-on-surface-variant">Outcome</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-outline-variant/10">
+                            <tr class="hover:bg-surface-container-low/30 transition-colors">
+                                <td class="py-4 px-4 text-sm font-bold text-primary">PRJ-2025-089</td>
+                                <td class="py-4 px-4 text-sm font-medium text-on-surface-variant">Geotechnical</td>
+                                <td class="py-4 px-4 text-sm font-medium text-on-surface-variant">BUMN</td>
+                                <td class="py-4 px-4 text-sm font-medium text-on-surface-variant">Rp 45B</td>
+                                <td class="py-4 px-4">
+                                    <span class="px-2 py-1 text-[10px] font-bold rounded-md bg-green-100 text-green-800 uppercase tracking-wide">Won</span>
+                                </td>
+                                <td class="py-4 px-4 text-sm font-bold text-green-600">Success</td>
+                            </tr>
+                            <tr class="hover:bg-surface-container-low/30 transition-colors">
+                                <td class="py-4 px-4 text-sm font-bold text-primary">PRJ-2025-088</td>
+                                <td class="py-4 px-4 text-sm font-medium text-on-surface-variant">Hydrology</td>
+                                <td class="py-4 px-4 text-sm font-medium text-on-surface-variant">Government</td>
+                                <td class="py-4 px-4 text-sm font-medium text-on-surface-variant">Rp 12B</td>
+                                <td class="py-4 px-4">
+                                    <span class="px-2 py-1 text-[10px] font-bold rounded-md bg-green-100 text-green-800 uppercase tracking-wide">Won</span>
+                                </td>
+                                <td class="py-4 px-4 text-sm font-bold text-green-600">Success</td>
+                            </tr>
+                            <tr class="hover:bg-surface-container-low/30 transition-colors">
+                                <td class="py-4 px-4 text-sm font-bold text-primary">PRJ-2025-087</td>
+                                <td class="py-4 px-4 text-sm font-medium text-on-surface-variant">Infrastructure</td>
+                                <td class="py-4 px-4 text-sm font-medium text-on-surface-variant">Private</td>
+                                <td class="py-4 px-4 text-sm font-medium text-on-surface-variant">Rp 85B</td>
+                                <td class="py-4 px-4">
+                                    <span class="px-2 py-1 text-[10px] font-bold rounded-md bg-red-100 text-red-800 uppercase tracking-wide">Lost</span>
+                                </td>
+                                <td class="py-4 px-4 text-sm font-bold text-red-600">Issue</td>
+                            </tr>
+                            <tr class="hover:bg-surface-container-low/30 transition-colors">
+                                <td class="py-4 px-4 text-sm font-bold text-primary">PRJ-2025-086</td>
+                                <td class="py-4 px-4 text-sm font-medium text-on-surface-variant">Geotechnical</td>
+                                <td class="py-4 px-4 text-sm font-medium text-on-surface-variant">BUMN</td>
+                                <td class="py-4 px-4 text-sm font-medium text-on-surface-variant">Rp 32B</td>
+                                <td class="py-4 px-4">
+                                    <span class="px-2 py-1 text-[10px] font-bold rounded-md bg-green-100 text-green-800 uppercase tracking-wide">Won</span>
+                                </td>
+                                <td class="py-4 px-4 text-sm font-bold text-green-600">Success</td>
+                            </tr>
+                            <tr class="hover:bg-surface-container-low/30 transition-colors">
+                                <td class="py-4 px-4 text-sm font-bold text-primary">PRJ-2025-085</td>
+                                <td class="py-4 px-4 text-sm font-medium text-on-surface-variant">Energy</td>
+                                <td class="py-4 px-4 text-sm font-medium text-on-surface-variant">Private</td>
+                                <td class="py-4 px-4 text-sm font-medium text-on-surface-variant">Rp 18B</td>
+                                <td class="py-4 px-4">
+                                    <span class="px-2 py-1 text-[10px] font-bold rounded-md bg-blue-100 text-blue-800 uppercase tracking-wide">Ongoing</span>
+                                </td>
+                                <td class="py-4 px-4 text-sm font-bold text-blue-600">On Track</td>
+                            </tr>
+                            <tr class="hover:bg-surface-container-low/30 transition-colors">
+                                <td class="py-4 px-4 text-sm font-bold text-primary">PRJ-2025-084</td>
+                                <td class="py-4 px-4 text-sm font-medium text-on-surface-variant">Environmental</td>
+                                <td class="py-4 px-4 text-sm font-medium text-on-surface-variant">Government</td>
+                                <td class="py-4 px-4 text-sm font-medium text-on-surface-variant">Rp 5B</td>
+                                <td class="py-4 px-4">
+                                    <span class="px-2 py-1 text-[10px] font-bold rounded-md bg-green-100 text-green-800 uppercase tracking-wide">Won</span>
+                                </td>
+                                <td class="py-4 px-4 text-sm font-bold text-orange-500">Delay</td>
+                            </tr>
+                            <tr class="hover:bg-surface-container-low/30 transition-colors">
+                                <td class="py-4 px-4 text-sm font-bold text-primary">PRJ-2025-083</td>
+                                <td class="py-4 px-4 text-sm font-medium text-on-surface-variant">Infrastructure</td>
+                                <td class="py-4 px-4 text-sm font-medium text-on-surface-variant">BUMN</td>
+                                <td class="py-4 px-4 text-sm font-medium text-on-surface-variant">Rp 120B</td>
+                                <td class="py-4 px-4">
+                                    <span class="px-2 py-1 text-[10px] font-bold rounded-md bg-blue-100 text-blue-800 uppercase tracking-wide">Ongoing</span>
+                                </td>
+                                <td class="py-4 px-4 text-sm font-bold text-orange-500">Delay</td>
+                            </tr>
+                            <tr class="hover:bg-surface-container-low/30 transition-colors">
+                                <td class="py-4 px-4 text-sm font-bold text-primary">PRJ-2025-082</td>
+                                <td class="py-4 px-4 text-sm font-medium text-on-surface-variant">Geotechnical</td>
+                                <td class="py-4 px-4 text-sm font-medium text-on-surface-variant">Private</td>
+                                <td class="py-4 px-4 text-sm font-medium text-on-surface-variant">Rp 15B</td>
+                                <td class="py-4 px-4">
+                                    <span class="px-2 py-1 text-[10px] font-bold rounded-md bg-green-100 text-green-800 uppercase tracking-wide">Won</span>
+                                </td>
+                                <td class="py-4 px-4 text-sm font-bold text-green-600">Success</td>
+                            </tr>
+                            <tr class="hover:bg-surface-container-low/30 transition-colors">
+                                <td class="py-4 px-4 text-sm font-bold text-primary">PRJ-2025-081</td>
+                                <td class="py-4 px-4 text-sm font-medium text-on-surface-variant">Hydrology</td>
+                                <td class="py-4 px-4 text-sm font-medium text-on-surface-variant">BUMN</td>
+                                <td class="py-4 px-4 text-sm font-medium text-on-surface-variant">Rp 28B</td>
+                                <td class="py-4 px-4">
+                                    <span class="px-2 py-1 text-[10px] font-bold rounded-md bg-red-100 text-red-800 uppercase tracking-wide">Lost</span>
+                                </td>
+                                <td class="py-4 px-4 text-sm font-bold text-red-600">Issue</td>
+                            </tr>
+                            <tr class="hover:bg-surface-container-low/30 transition-colors">
+                                <td class="py-4 px-4 text-sm font-bold text-primary">PRJ-2025-080</td>
+                                <td class="py-4 px-4 text-sm font-medium text-on-surface-variant">Infrastructure</td>
+                                <td class="py-4 px-4 text-sm font-medium text-on-surface-variant">Government</td>
+                                <td class="py-4 px-4 text-sm font-medium text-on-surface-variant">Rp 40B</td>
+                                <td class="py-4 px-4">
+                                    <span class="px-2 py-1 text-[10px] font-bold rounded-md bg-green-100 text-green-800 uppercase tracking-wide">Won</span>
+                                </td>
+                                <td class="py-4 px-4 text-sm font-bold text-green-600">Success</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <nav class="md:hidden fixed bottom-0 left-0 right-0 bg-slate-50 border-t border-slate-200 h-16 flex justify-around items-center px-4 z-50">
+        <a class="flex flex-col items-center text-blue-900" href="index.html">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span class="text-[10px] font-bold">Dash</span>
+        </a>
+        <a class="flex flex-col items-center text-slate-400" href="tender-input/index.html">
+            <span class="material-symbols-outlined">assignment</span>
+            <span class="text-[10px] font-bold">Bids</span>
+        </a>
+        <a class="flex flex-col items-center text-slate-400" href="strategic-decision/index.html">
+            <span class="material-symbols-outlined">analytics</span>
+            <span class="text-[10px] font-bold">Data</span>
+        </a>
+        <a class="flex flex-col items-center text-slate-400" href="expert-matching/index.html">
+            <span class="material-symbols-outlined">group</span>
+            <span class="text-[10px] font-bold">Team</span>
+        </a>
+    </nav>
+</body>
+</html>

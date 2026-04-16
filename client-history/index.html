@@ -1,12 +1,13 @@
-<!DOCTYPE html><html lang="en"><head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Client Tracker</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<script id="tailwind-config">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Client Tracker | PRISM Framework</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -70,209 +71,7 @@
             },
         }
     </script>
-</head>
-<body class="bg-surface text-on-surface font-body antialiased min-h-screen">
-<!-- TopNavBar: Included as this is a destination screen (Dashboard/Tracker) -->
-<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
-<div class="layout-container flex h-full grow flex-col">
-<div class="px-4 flex flex-1 justify-center py-5 sm:px-10 lg:px-40">
-<div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
-<header class="flex items-center justify-between whitespace-nowrap px-4 py-6 sm:px-10 bg-surface-container-lowest rounded-xl shadow-[0_12px_32px_rgba(25,28,30,0.06)] mb-8">
-<div class="flex items-center gap-4 text-on-surface">
-<div class="size-6 text-primary">
-<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">
-                                    analytics
-                                </span>
-</div>
-<h2 class="text-on-surface font-headline text-[1.5rem] font-bold leading-tight tracking-[-0.015em]" style="">Client Tracker</h2>
-</div>
-<div class="flex flex-1 justify-end gap-8 items-center">
-<label class="flex flex-col min-w-40 !h-10 max-w-64 hidden sm:flex" style="">
-<div class="flex w-full flex-1 items-stretch rounded-sm h-full bg-surface-container-low">
-<div class="text-on-surface-variant flex items-center justify-center pl-4 rounded-l-sm">
-<span class="material-symbols-outlined" style="">
-                                            search
-                                        </span>
-</div>
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-sm text-on-surface focus:outline-0 focus:ring-0 border-none bg-transparent focus:bg-surface-container-lowest focus:ring-[2px] focus:ring-surface-tint/40 h-full placeholder:text-on-surface-variant px-4 pl-2 text-sm font-body leading-normal transition-colors duration-200" placeholder="Search clients..." value="">
-</div>
-</label>
-<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 shadow-[0_4px_12px_rgba(0,0,0,0.08)]" data-alt="professional portrait of a consultant in a modern office with soft natural lighting" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCYf6VWNonXeyh5Bl_3r5BkPetEr5_nu-ErvngzD_fXYEdP4i8UXxmxqeztwKWyFbrdiP2peRyqoYp0P22srOuzQaQYzZFFv9i7W3NUzkgLdEsPb2X-d1rVBQShb0keRlD8GodVywl7QBTraH3cQPs0f_FfylcfFpIjNpckKYHeBs9k2V__gd6SIIsO3gakwb_h-8K1AP-EH041QkWMsatRQEYQruIM0bA8ZX1VqG54rpnp4O-EFvwT9uieS-JSjR18BWbPMQGbRVA&quot;);"></div>
-</div>
-</header>
-<div class="flex flex-col lg:flex-row gap-8">
-<!-- Sidebar Navigation -->
-<div class="w-full lg:w-64 flex-shrink-0">
-<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_12px_32px_rgba(25,28,30,0.06)] flex flex-col gap-8">
-<div class="flex gap-4 items-center">
-<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 shadow-[0_4px_12px_rgba(0,0,0,0.08)]" data-alt="professional portrait of a consultant in a modern office with soft natural lighting" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCTKuExo_2cu4bNufJfT58I4yBbrj_BlQow64vUhJXzjccMERuD-1q4ClCBymwGN_o16ldioGDulZZEa-sWEbQLw_1MXl6B7AlV4NNeE5vreiMr_-Y8JeXMvB5S2lurDBUK7Q8t9EEBoSVy2uP8GHgDp5kKjrzRuSVwxVzawfZrr4mGMeVcbaBKdcNjThS3n3WmP14LGykZz5q7uEHUrBaOvdzqUjA1qauCGf-Jl7sltUTcAtEcARbMwdRvIZo3TeHKk7efEt1AaCs&quot;);"></div>
-<div class="flex flex-col">
-<h1 class="text-on-surface font-headline text-base font-bold leading-normal" style="">Consultant Pro</h1>
-<p class="text-on-surface-variant font-body text-sm font-normal leading-normal" style="">Professional Plan</p>
-</div>
-</div>
-<nav class="flex flex-col gap-2">
-<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors group" href="#" style="">
-<span class="material-symbols-outlined group-hover:text-primary transition-colors" style="">
-                                            space_dashboard
-                                        </span>
-<span class="font-body text-sm font-medium" style="">Dashboard</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-surface-container-low text-primary font-medium group" href="#" style="">
-<span class="material-symbols-outlined text-primary" style="font-variation-settings: &quot;FILL&quot; 1;">
-                                            group
-                                        </span>
-<span class="font-body text-sm" style="">Clients</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors group" href="#" style="">
-<span class="material-symbols-outlined group-hover:text-primary transition-colors" style="">
-                                            folder
-                                        </span>
-<span class="font-body text-sm font-medium" style="">Projects</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors group" href="#" style="">
-<span class="material-symbols-outlined group-hover:text-primary transition-colors" style="">
-                                            settings
-                                        </span>
-<span class="font-body text-sm font-medium" style="">Settings</span>
-</a>
-</nav>
-</div>
-</div>
-<!-- Main Content Area -->
-<div class="flex-1 flex flex-col gap-6">
-<!-- Header & KPI Module -->
-<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 pt-2 pb-6">
-<div class="flex flex-col gap-2">
-<h1 class="text-on-surface font-headline text-[3.5rem] font-bold leading-none tracking-[-0.02em]" style="">Client Tracker</h1>
-<p class="text-on-surface-variant font-body text-base" style="">Manage relationships and upcoming strategic follow-ups.</p>
-</div>
-<div class="bg-surface-container-lowest rounded-xl p-6 min-w-[240px] shadow-[0_12px_32px_rgba(25,28,30,0.06)] relative overflow-hidden group">
-<div class="absolute inset-0 bg-gradient-to-br from-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-<p class="text-on-surface-variant font-label text-xs uppercase tracking-[0.05em] mb-4" style="">Total Active Value</p>
-<div class="flex items-end gap-3">
-<h3 class="text-on-surface font-headline text-[2rem] font-bold leading-none" style="">$1.24M</h3>
-<span class="text-on-secondary-container bg-secondary-container px-2 py-0.5 rounded-full font-body text-xs font-semibold mb-1 flex items-center gap-1" style="">
-<span class="material-symbols-outlined text-[14px]" style="">trending_up</span>
-                                            +12%
-                                        </span>
-</div>
-</div>
-</div>
-<!-- Tabs -->
-<div class="flex gap-4 border-b border-outline-variant/15 pb-px overflow-x-auto hide-scrollbar">
-<button class="px-4 py-2 text-primary font-body text-sm font-semibold border-b-2 border-primary whitespace-nowrap" style="">All Clients</button>
-<button class="px-4 py-2 text-on-surface-variant hover:text-on-surface font-body text-sm font-medium transition-colors whitespace-nowrap" style="">Follow-ups Due</button>
-<button class="px-4 py-2 text-on-surface-variant hover:text-on-surface font-body text-sm font-medium transition-colors whitespace-nowrap" style="">New Leads</button>
-</div>
-<!-- Client Table -->
-<div class="bg-surface-container-lowest rounded-xl shadow-[0_12px_32px_rgba(25,28,30,0.06)] overflow-hidden mt-4">
-<div class="overflow-x-auto">
-<table class="w-full text-left border-collapse">
-<thead>
-<tr class="bg-surface-container-low border-b border-outline-variant/15">
-<th class="px-6 py-4 text-on-surface-variant font-label text-xs uppercase tracking-[0.05em] font-semibold w-1/4" style="">Client Name</th>
-<th class="px-6 py-4 text-on-surface-variant font-label text-xs uppercase tracking-[0.05em] font-semibold w-1/4" style="">Last Project</th><th class="px-6 py-4 text-on-surface-variant font-label text-xs uppercase tracking-[0.05em] font-semibold" style="">Last Interaction</th><th class="px-6 py-4 text-on-surface-variant font-label text-xs uppercase tracking-[0.05em] font-semibold" style="">Next Action</th>
-<th class="px-6 py-4 text-on-surface-variant font-label text-xs uppercase tracking-[0.05em] font-semibold w-[15%]" style="">Status</th>
-<th class="px-6 py-4 text-on-surface-variant font-label text-xs uppercase tracking-[0.05em] font-semibold" style="">Repeat Value</th><th class="px-6 py-4 text-on-surface-variant font-label text-xs uppercase tracking-[0.05em] font-semibold" style="">Potential</th><th class="px-6 py-4 text-on-surface-variant font-label text-xs uppercase tracking-[0.05em] font-semibold text-right w-1/4" style="">Follow-up</th>
-</tr>
-</thead>
-<tbody class="font-body text-sm">
-<!-- Row 1 -->
-<tr class="border-b border-outline-variant/15 hover:bg-surface-container-low/50 transition-colors group bg-primary/5">
-<td class="px-6 py-5" style="">
-<div class="flex items-center gap-3">
-<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-xs shrink-0" style="">AC</div>
-<span class="text-on-surface font-semibold" style="">Acme Corp</span>
-</div>
-</td>
-<td class="px-6 py-5 text-on-surface-variant" style="">Website Redesign</td><td class="px-6 py-5 text-on-surface-variant" style="">Oct 12</td><td class="px-6 py-5 font-medium text-on-surface" style="">Renew Retainer &amp; Upsell</td>
-<td class="px-6 py-5" style="">
-<span class="inline-flex items-center justify-center px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-semibold text-xs whitespace-nowrap" style="">
-                                                        Ongoing
-                                                    </span>
-</td>
-<td class="px-6 py-5 font-semibold text-on-surface" style="">$450k</td><td class="px-6 py-5" style=""><span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-green-100 text-green-800" style="">High</span></td><td class="px-6 py-5 text-right" style="">
-<div class="flex items-center justify-end gap-2 text-on-error-container font-semibold" style="">
-<span class="material-symbols-outlined text-[16px]" style="">schedule</span>
-                                                        In 2 days
-                                                    </div>
-</td>
-</tr>
-<!-- Row 2 -->
-<tr class="border-b border-outline-variant/15 hover:bg-surface-container-low/50 transition-colors group">
-<td class="px-6 py-5" style="">
-<div class="flex items-center gap-3">
-<div class="w-8 h-8 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-bold text-xs shrink-0" style="">GI</div>
-<span class="text-on-surface font-semibold" style="">Globex Inc</span>
-</div>
-</td>
-<td class="px-6 py-5 text-on-surface-variant" style="">SEO Audit</td><td class="px-6 py-5 text-on-surface-variant" style="">Oct 14</td><td class="px-6 py-5 font-medium text-on-surface" style="">Propose Phase 2: SEO Growth</td>
-<td class="px-6 py-5" style="">
-<span class="inline-flex items-center justify-center px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-semibold text-xs whitespace-nowrap" style="">
-                                                        New
-                                                    </span>
-</td>
-<td class="px-6 py-5 font-semibold text-on-surface" style="">$1.2M</td><td class="px-6 py-5" style=""><span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-blue-100 text-blue-800" style="">Medium</span></td><td class="px-6 py-5 text-right" style="">
-<div class="flex items-center justify-end gap-2 text-on-surface-variant font-medium" style="">
-<span class="material-symbols-outlined text-[16px]" style="">calendar_today</span>
-                                                        In 5 days
-                                                    </div>
-</td>
-</tr>
-<!-- Row 3 -->
-<tr class="border-b border-outline-variant/15 hover:bg-surface-container-low/50 transition-colors group">
-<td class="px-6 py-5" style="">
-<div class="flex items-center gap-3">
-<div class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center font-bold text-xs shrink-0" style="">SC</div>
-<span class="text-on-surface font-semibold" style="">Soylent Corp</span>
-</div>
-</td>
-<td class="px-6 py-5 text-on-surface-variant" style="">Marketing Strategy</td><td class="px-6 py-5 text-on-surface-variant" style="">Oct 18</td><td class="px-6 py-5 font-medium text-on-surface" style="">Quarterly Strategy Review</td>
-<td class="px-6 py-5" style="">
-<span class="inline-flex items-center justify-center px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-semibold text-xs whitespace-nowrap" style="">
-                                                        Repeat
-                                                    </span>
-</td>
-<td class="px-6 py-5 font-semibold text-on-surface" style="">$280k</td><td class="px-6 py-5" style=""><span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-gray-100 text-gray-800" style="">Low</span></td><td class="px-6 py-5 text-right" style="">
-<div class="flex items-center justify-end gap-2 text-on-surface-variant font-medium" style="">
-<span class="material-symbols-outlined text-[16px]" style="">calendar_today</span>
-                                                        In 14 days
-                                                    </div>
-</td>
-</tr>
-<!-- Row 4 -->
-<tr class="hover:bg-surface-container-low/50 transition-colors group bg-error/5">
-<td class="px-6 py-5" style="">
-<div class="flex items-center gap-3">
-<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-xs shrink-0" style="">IN</div>
-<span class="text-on-surface font-semibold" style="">Initech</span>
-</div>
-</td>
-<td class="px-6 py-5 text-on-surface-variant" style="">Q3 Campaign</td><td class="px-6 py-5 text-on-surface-variant" style="">Oct 20</td><td class="px-6 py-5 font-medium text-on-surface" style="">LTV Expansion Meeting</td>
-<td class="px-6 py-5" style="">
-<span class="inline-flex items-center justify-center px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-semibold text-xs whitespace-nowrap" style="">
-                                                        Ongoing
-                                                    </span>
-</td>
-<td class="px-6 py-5 font-semibold text-on-surface" style="">$600k</td><td class="px-6 py-5" style=""><span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-green-100 text-green-800" style="">High</span></td><td class="px-6 py-5 text-right" style="">
-<div class="flex items-center justify-end gap-2 text-error font-bold" style="">
-<span class="material-symbols-outlined text-[16px]" style="">warning</span>
-                                                        Tomorrow
-                                                    </div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<style>
+    <style>
         .hide-scrollbar::-webkit-scrollbar {
             display: none;
         }
@@ -280,5 +79,252 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
     </style>
-</body></html>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased min-h-screen">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <div class="px-4 flex flex-1 justify-center py-5 sm:px-10 lg:px-40">
+                <div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+                    
+                    <header class="flex items-center justify-between whitespace-nowrap px-4 py-6 sm:px-10 bg-surface-container-lowest rounded-xl shadow-[0_12px_32px_rgba(25,28,30,0.06)] mb-8">
+                        <div class="flex items-center gap-4 text-on-surface">
+                            <div class="size-6 text-primary">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">
+                                    analytics
+                                </span>
+                            </div>
+                            <h2 class="text-on-surface font-headline text-[1.5rem] font-bold leading-tight tracking-[-0.015em]">PRISM Framework</h2>
+                        </div>
+                        <div class="flex flex-1 justify-end gap-8 items-center">
+                            <label class="flex flex-col min-w-40 !h-10 max-w-64 hidden sm:flex">
+                                <div class="flex w-full flex-1 items-stretch rounded-sm h-full bg-surface-container-low">
+                                    <div class="text-on-surface-variant flex items-center justify-center pl-4 rounded-l-sm">
+                                        <span class="material-symbols-outlined">search</span>
+                                    </div>
+                                    <input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-sm text-on-surface focus:outline-0 focus:ring-0 border-none bg-transparent focus:bg-surface-container-lowest focus:ring-[2px] focus:ring-surface-tint/40 h-full placeholder:text-on-surface-variant px-4 pl-2 text-sm font-body leading-normal transition-colors duration-200" placeholder="Search clients..." value="">
+                                </div>
+                            </label>
+                            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 shadow-[0_4px_12px_rgba(0,0,0,0.08)]" data-alt="professional portrait of a consultant in a modern office with soft natural lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCYf6VWNonXeyh5Bl_3r5BkPetEr5_nu-ErvngzD_fXYEdP4i8UXxmxqeztwKWyFbrdiP2peRyqoYp0P22srOuzQaQYzZFFv9i7W3NUzkgLdEsPb2X-d1rVBQShb0keRlD8GodVywl7QBTraH3cQPs0f_FfylcfFpIjNpckKYHeBs9k2V__gd6SIIsO3gakwb_h-8K1AP-EH041QkWMsatRQEYQruIM0bA8ZX1VqG54rpnp4O-EFvwT9uieS-JSjR18BWbPMQGbRVA');"></div>
+                        </div>
+                    </header>
+
+                    <div class="flex flex-col lg:flex-row gap-8">
+                        <div class="w-full lg:w-64 flex-shrink-0">
+                            <div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_12px_32px_rgba(25,28,30,0.06)] flex flex-col gap-8">
+                                <div class="flex gap-4 items-center">
+                                    <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 shadow-[0_4px_12px_rgba(0,0,0,0.08)]" data-alt="professional portrait of a consultant in a modern office with soft natural lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCTKuExo_2cu4bNufJfT58I4yBbrj_BlQow64vUhJXzjccMERuD-1q4ClCBymwGN_o16ldioGDulZZEa-sWEbQLw_1MXl6B7AlV4NNeE5vreiMr_-Y8JeXMvB5S2lurDBUK7Q8t9EEBoSVy2uP8GHgDp5kKjrzRuSVwxVzawfZrr4mGMeVcbaBKdcNjThS3n3WmP14LGykZz5q7uEHUrBaOvdzqUjA1qauCGf-Jl7sltUTcAtEcARbMwdRvIZo3TeHKk7efEt1AaCs');"></div>
+                                    <div class="flex flex-col">
+                                        <h1 class="text-on-surface font-headline text-base font-bold leading-normal">PRISM Account</h1>
+                                        <p class="text-on-surface-variant font-body text-sm font-normal leading-normal">Enterprise Plan</p>
+                                    </div>
+                                </div>
+                                <nav class="flex flex-col gap-2">
+                                    <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors group" href="../index.html">
+                                        <span class="material-symbols-outlined group-hover:text-primary transition-colors">dashboard</span>
+                                        <span class="font-body text-sm font-medium">Dashboard</span>
+                                    </a>
+                                    <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors group" href="../tender-input/index.html">
+                                        <span class="material-symbols-outlined group-hover:text-primary transition-colors">add_circle</span>
+                                        <span class="font-body text-sm font-medium">New Tender</span>
+                                    </a>
+                                    <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors group" href="../strategic-decision/index.html">
+                                        <span class="material-symbols-outlined group-hover:text-primary transition-colors">analytics</span>
+                                        <span class="font-body text-sm font-medium">Decision Results</span>
+                                    </a>
+                                    <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors group" href="../expert-matching/index.html">
+                                        <span class="material-symbols-outlined group-hover:text-primary transition-colors">group_add</span>
+                                        <span class="font-body text-sm font-medium">Expert Matching</span>
+                                    </a>
+                                    <a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-surface-container-low text-primary font-medium group" href="index.html">
+                                        <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">monetization_on</span>
+                                        <span class="font-body text-sm">Client Tracker</span>
+                                    </a>
+                                </nav>
+                            </div>
+                        </div>
+
+                        <div class="flex-1 flex flex-col gap-6">
+                            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 pt-2 pb-6">
+                                <div class="flex flex-col gap-2 max-w-xl">
+                                    <h1 class="text-on-surface font-headline text-[3.5rem] font-bold leading-none tracking-[-0.02em]">Client Tracker</h1>
+                                    <p class="text-on-surface-variant font-body text-base">Manage relationships and upcoming strategic follow-ups based on project history.</p>
+                                    
+                                    <div class="flex flex-wrap gap-4 mt-4">
+                                        <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-surface-container-lowest rounded-lg border border-outline-variant/30 text-xs">
+                                            <span class="font-bold text-on-surface-variant uppercase tracking-wider">Potential Logic:</span>
+                                            <span class="text-green-700 font-bold">High (>1 Proj)</span> | 
+                                            <span class="text-blue-700 font-bold">Medium (1 Proj)</span> | 
+                                            <span class="text-gray-600 font-bold">Low (No Hist)</span>
+                                        </div>
+                                        <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-error-container/20 rounded-lg border border-error/20 text-xs">
+                                            <span class="material-symbols-outlined text-error text-[14px]">warning</span>
+                                            <span class="font-bold text-error">Alert:</span>
+                                            <span class="text-on-surface-variant font-medium">Interaction > 14 days overdue</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bg-surface-container-lowest rounded-xl p-6 min-w-[240px] shadow-[0_12px_32px_rgba(25,28,30,0.06)] relative overflow-hidden group">
+                                    <div class="absolute inset-0 bg-gradient-to-br from-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                    <p class="text-on-surface-variant font-label text-xs uppercase tracking-[0.05em] mb-4">Total Active Pipeline</p>
+                                    <div class="flex items-end gap-3">
+                                        <h3 class="text-on-surface font-headline text-[2rem] font-bold leading-none">Rp 125B</h3>
+                                        <span class="text-on-secondary-container bg-secondary-container px-2 py-0.5 rounded-full font-body text-xs font-semibold mb-1 flex items-center gap-1">
+                                            <span class="material-symbols-outlined text-[14px]">trending_up</span>
+                                            +12%
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-4 border-b border-outline-variant/15 pb-px overflow-x-auto hide-scrollbar">
+                                <button class="px-4 py-2 text-primary font-body text-sm font-semibold border-b-2 border-primary whitespace-nowrap">All Clients</button>
+                                <button class="px-4 py-2 text-on-surface-variant hover:text-on-surface font-body text-sm font-medium transition-colors whitespace-nowrap">Follow-ups Due</button>
+                                <button class="px-4 py-2 text-on-surface-variant hover:text-on-surface font-body text-sm font-medium transition-colors whitespace-nowrap">BUMN Priority</button>
+                            </div>
+
+                            <div class="bg-surface-container-lowest rounded-xl shadow-[0_12px_32px_rgba(25,28,30,0.06)] overflow-hidden mt-4">
+                                <div class="overflow-x-auto">
+                                    <table class="w-full text-left border-collapse min-w-[900px]">
+                                        <thead>
+                                            <tr class="bg-surface-container-low border-b border-outline-variant/15">
+                                                <th class="px-6 py-4 text-on-surface-variant font-label text-xs uppercase tracking-[0.05em] font-semibold w-[20%]">Client Name</th>
+                                                <th class="px-6 py-4 text-on-surface-variant font-label text-xs uppercase tracking-[0.05em] font-semibold w-[15%]">Type</th>
+                                                <th class="px-6 py-4 text-on-surface-variant font-label text-xs uppercase tracking-[0.05em] font-semibold">Last Project</th>
+                                                <th class="px-6 py-4 text-on-surface-variant font-label text-xs uppercase tracking-[0.05em] font-semibold">Last Interaction</th>
+                                                <th class="px-6 py-4 text-on-surface-variant font-label text-xs uppercase tracking-[0.05em] font-semibold w-[15%]">Status</th>
+                                                <th class="px-6 py-4 text-on-surface-variant font-label text-xs uppercase tracking-[0.05em] font-semibold">Potential</th>
+                                                <th class="px-6 py-4 text-on-surface-variant font-label text-xs uppercase tracking-[0.05em] font-semibold text-right w-[15%]">Follow-up Due</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="font-body text-sm">
+                                            
+                                            <tr class="border-b border-outline-variant/15 hover:bg-surface-container-low/50 transition-colors group bg-primary/5">
+                                                <td class="px-6 py-5">
+                                                    <div class="flex items-center gap-3">
+                                                        <div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-xs shrink-0">PJ</div>
+                                                        <span class="text-on-surface font-semibold">PT Pembangunan Jaya</span>
+                                                    </div>
+                                                </td>
+                                                <td class="px-6 py-5">
+                                                    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-blue-100 text-blue-800">BUMN</span>
+                                                </td>
+                                                <td class="px-6 py-5 text-on-surface-variant">Jalan Tol X (Ongoing)</td>
+                                                <td class="px-6 py-5 text-on-surface-variant">2 days ago</td>
+                                                <td class="px-6 py-5">
+                                                    <span class="inline-flex items-center justify-center px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-semibold text-xs whitespace-nowrap">
+                                                        Active Bidding
+                                                    </span>
+                                                </td>
+                                                <td class="px-6 py-5">
+                                                    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-green-100 text-green-800">High</span>
+                                                </td>
+                                                <td class="px-6 py-5 text-right">
+                                                    <div class="flex items-center justify-end gap-2 text-on-surface-variant font-medium">
+                                                        <span class="material-symbols-outlined text-[16px]">schedule</span>
+                                                        In 3 days
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="border-b border-outline-variant/15 hover:bg-error/5 transition-colors group bg-error/5">
+                                                <td class="px-6 py-5">
+                                                    <div class="flex items-center gap-3">
+                                                        <div class="w-8 h-8 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-bold text-xs shrink-0">DP</div>
+                                                        <span class="text-on-surface font-semibold">Dinas PUPR Jabar</span>
+                                                    </div>
+                                                </td>
+                                                <td class="px-6 py-5">
+                                                    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-gray-200 text-gray-800">Government</span>
+                                                </td>
+                                                <td class="px-6 py-5 text-on-surface-variant">Bendungan Y (Completed)</td>
+                                                <td class="px-6 py-5 text-error font-bold">18 days ago</td>
+                                                <td class="px-6 py-5">
+                                                    <span class="inline-flex items-center justify-center px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-semibold text-xs whitespace-nowrap">
+                                                        Dormant
+                                                    </span>
+                                                </td>
+                                                <td class="px-6 py-5">
+                                                    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-blue-100 text-blue-800">Medium</span>
+                                                </td>
+                                                <td class="px-6 py-5 text-right">
+                                                    <div class="flex items-center justify-end gap-2 text-error font-bold">
+                                                        <span class="material-symbols-outlined text-[16px]">warning</span>
+                                                        Overdue (4 days)
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="border-b border-outline-variant/15 hover:bg-surface-container-low/50 transition-colors group">
+                                                <td class="px-6 py-5">
+                                                    <div class="flex items-center gap-3">
+                                                        <div class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center font-bold text-xs shrink-0">KM</div>
+                                                        <span class="text-on-surface font-semibold">Kawasan Mandiri</span>
+                                                    </div>
+                                                </td>
+                                                <td class="px-6 py-5">
+                                                    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-purple-100 text-purple-800">Private</span>
+                                                </td>
+                                                <td class="px-6 py-5 text-on-surface-variant italic text-xs">No prior history</td>
+                                                <td class="px-6 py-5 text-on-surface-variant">5 days ago</td>
+                                                <td class="px-6 py-5">
+                                                    <span class="inline-flex items-center justify-center px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-semibold text-xs whitespace-nowrap">
+                                                        New Lead
+                                                    </span>
+                                                </td>
+                                                <td class="px-6 py-5">
+                                                    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-gray-100 text-gray-800">Low</span>
+                                                </td>
+                                                <td class="px-6 py-5 text-right">
+                                                    <div class="flex items-center justify-end gap-2 text-on-surface-variant font-medium">
+                                                        <span class="material-symbols-outlined text-[16px]">calendar_today</span>
+                                                        In 7 days
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="hover:bg-surface-container-low/50 transition-colors group">
+                                                <td class="px-6 py-5">
+                                                    <div class="flex items-center gap-3">
+                                                        <div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-xs shrink-0">HK</div>
+                                                        <span class="text-on-surface font-semibold">Hutama Karya</span>
+                                                    </div>
+                                                </td>
+                                                <td class="px-6 py-5">
+                                                    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-blue-100 text-blue-800">BUMN</span>
+                                                </td>
+                                                <td class="px-6 py-5 text-on-surface-variant">Tol Sumatera P4</td>
+                                                <td class="px-6 py-5 text-on-surface-variant">10 days ago</td>
+                                                <td class="px-6 py-5">
+                                                    <span class="inline-flex items-center justify-center px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-semibold text-xs whitespace-nowrap">
+                                                        Ongoing Relation
+                                                    </span>
+                                                </td>
+                                                <td class="px-6 py-5">
+                                                    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-green-100 text-green-800">High</span>
+                                                </td>
+                                                <td class="px-6 py-5 text-right">
+                                                    <div class="flex items-center justify-end gap-2 text-orange-600 font-bold">
+                                                        <span class="material-symbols-outlined text-[16px]">notifications_active</span>
+                                                        Tomorrow
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
