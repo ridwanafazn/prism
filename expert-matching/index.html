@@ -74,13 +74,14 @@
     <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
         }
-        body { font-family: 'Inter', sans-serif; background-color: #f8f9fb; }
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9fb; color: #191c1e; }
         .font-manrope { font-family: 'Manrope', sans-serif; }
     </style>
 </head>
 <body class="bg-background text-on-surface">
-    <aside class="h-screen w-64 fixed left-0 top-0 border-r bg-slate-100 dark:bg-slate-950 flex flex-col p-4 space-y-2 z-50">
+    <aside class="hidden md:flex flex-col h-screen w-64 fixed left-0 top-0 border-r bg-slate-100 dark:bg-slate-950 p-4 space-y-2 z-50">
         <div class="flex items-center gap-3 px-2 mb-8">
             <div class="w-10 h-10 bg-primary flex items-center justify-center rounded-lg">
                 <span class="material-symbols-outlined text-white" data-icon="auto_awesome">auto_awesome</span>
@@ -104,7 +105,7 @@
                 Decision Results
             </a>
             <a class="flex items-center gap-3 px-3 py-2 bg-white dark:bg-blue-900/20 text-blue-900 dark:text-blue-200 rounded-lg shadow-sm font-bold font-inter text-sm tracking-wide" href="index.html">
-                <span class="material-symbols-outlined" data-icon="group_add">group_add</span>
+                <span class="material-symbols-outlined" data-icon="group_add" style="font-variation-settings: 'FILL' 1;">group_add</span>
                 Expert Matching
             </a>
             <a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 hover:translate-x-1 transition-transform duration-200 font-inter text-sm font-medium tracking-wide" href="../client-history/index.html">
@@ -124,7 +125,7 @@
         </div>
     </aside>
 
-    <main class="ml-64 min-h-screen">
+    <main class="md:ml-64 min-h-screen bg-surface flex flex-col">
         <header class="flex justify-between items-center px-8 h-16 w-full sticky top-0 bg-slate-50/70 dark:bg-slate-900/70 backdrop-blur-md border-b border-slate-200/50 dark:border-slate-800/50 z-40">
             <div class="flex items-center gap-8">
                 <div class="relative">
@@ -132,25 +133,20 @@
                     <input class="pl-10 pr-4 py-1.5 bg-surface-container-low border-none rounded-sm text-sm focus:ring-2 focus:ring-surface-tint/40 w-64 transition-all" placeholder="Search resources..." type="text">
                 </div>
                 <nav class="hidden md:flex items-center gap-6">
-                    <a class="text-slate-500 hover:text-blue-800 transition-colors font-manrope font-bold text-sm tracking-tight" href="../index.html">Dashboard</a>
-                    <a class="text-slate-500 hover:text-blue-800 transition-colors font-manrope font-bold text-sm tracking-tight" href="../tender-input/index.html">New Tender</a>
-                    <a class="text-slate-500 hover:text-blue-800 transition-colors font-manrope font-bold text-sm tracking-tight" href="../strategic-decision/index.html">Decision Results</a>
+                    <a class="text-blue-900 dark:text-blue-200 font-manrope font-bold text-sm tracking-tight border-b-2 border-blue-900 dark:border-blue-200 pb-1" href="index.html">Resource Matching</a>
                 </nav>
             </div>
             <div class="flex items-center gap-4">
                 <button class="p-2 text-slate-500 hover:bg-slate-100 rounded-md transition-all">
                     <span class="material-symbols-outlined" data-icon="notifications">notifications</span>
                 </button>
-                <button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-4 py-2 rounded-md text-sm font-semibold shadow-sm hover:opacity-90 active:scale-95 transition-all">
-                    Create New
-                </button>
                 <div class="w-8 h-8 rounded-full overflow-hidden border border-slate-200">
-                    <img class="w-full h-full object-cover" data-alt="close-up portrait of a professional male business consultant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf9b9qiRnzcFQIzB2gOpSUvemCxKkncCB8ctPOj13JG0m41kOykuuERKqBOUnlssi7QhEeIoV4QPsTOhM4Ug1n_3dQVuwWWKPkWiVHoLFt6aVJEbvhh4aqQjpiFCA2haVIYCZZToCcmeB75FBJrfCqc7FzA5oOHCAuaYHUxHhSqLC92D0g30M0pprphYnJv7MM4bEdHRwDLbTR7OguCJVxZWlmkvs01HkQsf7UZB4G-4ynKAS337il3hYLMxJUV2stcCUCGnfcbmM">
+                    <img class="w-full h-full object-cover" data-alt="professional user portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn9Gch-dwgZAfY7dUAo7deEMn8TyR1t7g-X_oDui-CjaGT4tmnWQIU4cWXXYagP5QK3eYcug2Z3X4wZxys94dUVKGM8iibgI0Rw2WLZKgacU_8wXhsg25OvxM8gGoEz4CJ5sbeT51rylFw9iBYNUCmGYt5dqGMCL5eTbEK1sia26EMUJozAJg4wlcmJvjWENzd4Me5XcGwij60ilLnRVUTc5LMV6Y-1mD5qdfTbH9t-9ujOZeatgZvUltRc06X1oZvuuV_TgGQX_Q">
                 </div>
             </div>
         </header>
 
-        <div class="p-12 max-w-7xl mx-auto space-y-12">
+        <div class="flex-grow p-12 max-w-7xl mx-auto space-y-12 w-full">
             <section class="flex flex-col md:flex-row md:items-end justify-between gap-8">
                 <div class="space-y-4 max-w-2xl">
                     <span class="label-md text-[10px] font-bold tracking-[0.1em] text-secondary py-1 px-3 bg-secondary-container rounded-full uppercase">Expert Decision Support</span>
@@ -417,7 +413,7 @@
             </section>
         </div>
 
-        <div class="fixed bottom-8 left-1/2 -translate-x-1/2 md:translate-x-0 md:left-auto md:right-8 z-50">
+        <div class="fixed bottom-24 md:bottom-8 left-1/2 -translate-x-1/2 md:translate-x-0 md:left-auto md:right-8 z-50">
             <div class="bg-primary shadow-2xl text-white px-8 py-5 rounded-xl flex items-center gap-10 border border-white/10 backdrop-blur-xl">
                 <div class="flex items-center gap-4">
                     <div class="flex -space-x-3">
@@ -437,5 +433,24 @@
             </div>
         </div>
     </main>
+
+    <nav class="md:hidden fixed bottom-0 left-0 right-0 bg-slate-50 border-t border-slate-200 h-16 flex justify-around items-center px-4 z-50">
+        <a class="flex flex-col items-center text-slate-400" href="../index.html">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span class="text-[10px] font-bold">Dash</span>
+        </a>
+        <a class="flex flex-col items-center text-slate-400" href="../tender-input/index.html">
+            <span class="material-symbols-outlined">add_circle</span>
+            <span class="text-[10px] font-bold">New</span>
+        </a>
+        <a class="flex flex-col items-center text-slate-400" href="../strategic-decision/index.html">
+            <span class="material-symbols-outlined">analytics</span>
+            <span class="text-[10px] font-bold">Results</span>
+        </a>
+        <a class="flex flex-col items-center text-blue-900" href="index.html">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">group_add</span>
+            <span class="text-[10px] font-bold">Experts</span>
+        </a>
+    </nav>
 </body>
 </html>
